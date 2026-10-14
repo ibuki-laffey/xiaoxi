@@ -34,7 +34,8 @@
 下载后可自行校验，确保文件与本仓库声明一致、未被篡改：
 
 ```
-文件名 : 筱溪智能助手.exe
+下载文件名 : Xiaoxi-Assistant-v1.0-win64.exe（Release 附件）
+本地文件名 : 筱溪智能助手.exe（同一文件，内容一致）
 SHA256 : 6de9762e27f3a8b81dddf3aa39206717d5041b50ffb1aebe7767fde26c965952
 大小   : 142,128,471 字节（约 135.5 MB）
 ```
@@ -51,7 +52,7 @@ Get-FileHash .\筱溪智能助手.exe -Algorithm SHA256
 
 ## 运行方式
 
-1. 从 [Releases](../../releases) 下载 `筱溪智能助手.exe`；
+1. 从 [Releases](../../releases) 下载 `Xiaoxi-Assistant-v1.0-win64.exe`；
 2. （可选）按上节校验 SHA256；
 3. 双击运行即可，无需安装 Python 或其它依赖。
 
