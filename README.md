@@ -34,10 +34,10 @@
 下载后可自行校验，确保文件与本仓库声明一致、未被篡改：
 
 ```
-下载文件名 : Xiaoxi-Assistant-v1.0-win64.exe（Release 附件）
+下载文件名 : Xiaoxi-Assistant-v1.1-win64.exe（Release 附件）
 本地文件名 : 筱溪智能助手.exe（同一文件，内容一致）
-SHA256 : 6de9762e27f3a8b81dddf3aa39206717d5041b50ffb1aebe7767fde26c965952
-大小   : 142,128,471 字节（约 135.5 MB）
+SHA256 : C4BBEEFD60EB5ED0CEED98DA3D68E0F52FF5D71BDE15C1B85C44842115605259
+大小   : 142,246,727 字节（约 135.6 MB）
 ```
 
 Windows 校验命令：
@@ -52,11 +52,18 @@ Get-FileHash .\筱溪智能助手.exe -Algorithm SHA256
 
 ## 运行方式
 
-1. 从 [Releases](../../releases) 下载 `Xiaoxi-Assistant-v1.0-win64.exe`；
+1. 从 [Releases](../../releases) 下载 `Xiaoxi-Assistant-v1.1-win64.exe`；
 2. （可选）按上节校验 SHA256；
 3. 双击运行即可，无需安装 Python 或其它依赖。
 
 > 首次启动为单文件自解压，可能需要数秒至十余秒加载，请耐心等待主窗口出现。
+
+---
+
+## 版本记录
+
+- **v1.1**（2026-10-15）：新增启动「模型连接」弹窗——每次启动可选择连接 API 或本地模型；主界面新增「切换模型」按钮可随时重开该弹窗切换推理后端。
+- **v1.0**（2026-10-14）：首次公开发布编译产物。
 
 ---
 
