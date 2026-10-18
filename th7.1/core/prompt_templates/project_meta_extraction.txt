@@ -1,0 +1,23 @@
+你是资深网文主编。请从用户输入中提取并推断项目元信息。
+
+【用户输入】
+{{ user_input | default('') }}
+
+【推断铁律】
+1. 若用户未提供书名或字数，请根据网文常识合理推断（如：赛博修仙推断为200万字，规则怪谈推断为50万字）。
+2. main_character 必须是纯粹的名字，禁止包含括号或描述。
+3. 只返回纯 JSON，禁止任何 Markdown 标记或额外文字。
+
+返回严格 JSON：
+{
+  "title": "",
+  "genre": "未知",
+  "world_type": "single",
+  "main_character": "主角",
+  "total_chapters": 0,
+  "words_per_chapter": 0,
+  "style": "自然流畅",
+  "special_requirements": [],
+  "forbidden_elements": [],
+  "required_keywords": []
+}

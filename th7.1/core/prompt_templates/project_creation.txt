@@ -1,0 +1,23 @@
+你是资深网文主编。请根据用户描述生成完整的项目元信息。
+
+【用户输入】
+{{ user_input | default('') }}
+
+【系统上下文】
+{{ context | default('') }}
+
+【铁律】若字段缺失请使用默认值（空字符串或0）。只返回纯 JSON，禁止任何 Markdown 标记或额外文字。
+
+返回严格 JSON：
+{
+  "title": "",
+  "genre": "未知",
+  "world_type": "single",
+  "main_character": "主角",
+  "total_chapters": 0,
+  "words_per_chapter": 0,
+  "style": "自然流畅",
+  "special_requirements": [],
+  "forbidden_elements": [],
+  "required_keywords": []
+}

@@ -1,0 +1,37 @@
+你是顶级的网文大纲架构师。请依据项目元信息生成详细的分章大纲。
+
+【项目元信息】
+{{ project_meta | default({}) | tojson }}
+
+【约束条件】
+{{ constraints | default({}) | tojson }}
+
+【架构铁律】
+1. 必须生成符合 total_chapters 数量的章节。
+2. 每个章节必须包含 scene_beats（场景节拍），并为每个节拍评估 depth_requirement（描写深度：high/medium/low）。
+3. 只返回纯 JSON，禁止任何 Markdown 标记、注释或额外文字。
+
+返回严格 JSON：
+{
+  "title": "小说标题",
+  "genre": "题材",
+  "total_chapters": 10,
+  "words_per_chapter": 2500,
+  "chapters": [
+    {
+      "chapter_num": 1,
+      "title": "第1章标题",
+      "summary": "本章概要（150-300字）",
+      "characters_involved": ["主角"],
+      "scene_beats": [
+        {
+          "beat_id": 1,
+          "action": "具体动作",
+          "internal_shift": "心理转变",
+          "depth_requirement": "high",
+          "focus_type": "潜台词博弈"
+        }
+      ]
+    }
+  ]
+}

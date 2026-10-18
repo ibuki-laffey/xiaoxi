@@ -1,0 +1,26 @@
+你是顶级的网文作家兼导演。请根据以下信息，生成第 {{ chapter_num | default(1) }} 章的完整正文。
+
+【项目与大纲信息】
+{{ task_plan | default({}) | tojson }}
+本章大纲：{{ chapter_outline | default({}) | tojson }}
+
+【上下文与状态】
+前置上下文：{{ previous_context | default('无') }}
+世界状态：{{ world_state | default('{}') }}
+角色状态：{{ character_states | default('{}') }}
+
+【导演场记板 - 动笔前的自主思考】
+在正式撰写正文前，请你作为“总导演”，在 `<director_note>` 标签内进行一次简短的自主推演：
+1. 张力与节奏：评估当前剧情张力，决定叙事节奏。
+2. 叙事手法：决定最契合的视角和文学手法。
+<director_note>
+（在这里写下你的导演推演，限100字以内）
+</director_note>
+
+【最高铁律】
+1. 写完 `</director_note>` 后，必须立刻、直接开始输出小说正文！
+2. 绝对不要包含章节标题、章节编号、说明文字或任何 JSON/Markdown 标记。
+3. 严禁使用 AI 常用词（仿佛、似乎、无疑、值得注意的是、总而言之、综上所述）。
+4. 若字数不足 {{ task_plan.words_per_chapter | default(2500) }} 字，请自行扩充细节，拒绝水字数。
+
+请直接开始输出：
